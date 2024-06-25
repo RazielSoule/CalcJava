@@ -20,6 +20,11 @@ public class Main {
     public static String calc(String input) throws IOException {
         String[] inputSeparated = input.split(" ");
 
+        if (inputSeparated.length != 3) {
+            System.out.println("Wrong number of inputs");
+            throw new IOException();
+        }
+
         int firstNumber,secondNumber,result;
         String operation = inputSeparated[1];
         boolean firstRoma = false, secondRoma = false, romanOut = false;
